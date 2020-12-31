@@ -5,43 +5,78 @@
       alt="Quasar logo"
       src="~assets/quasar-logo-full.svg"
     >
-      <q-page-sticky position="bottom" :offset="[0, 18]">
-        <q-btn round color="accent" icon="arrow_forward" class="rotate-90" />
-      </q-page-sticky>
     </q-page>
     <hr>
     <q-page class="padding">
+      <div class="inner">
+        <br>
+        <div class="text-h3">
+          Who is yama?
+        </div><br><br>
+        <div class=icon-image>
+          <q-img
+            src="https://pbs.twimg.com/profile_images/986113842739478528/2PlaIAsz_400x400.jpg"
+            style="height: 280px; max-width: 300px"
+          ></q-img>
+          <!--<q-avatar>
+            <img src="https://pbs.twimg.com/profile_images/986113842739478528/2PlaIAsz_400x400.jpg">
+          </q-avatar>-->
+        </div><br>
+        <div class="text-h4">
+          yama
+        </div><br>
+
+      </div>
       <div class="layout-padding row justify-center background-whitesmoke items-center">
         <div class="col-xs-10 col-sm-7 col-lg-5">
           <div class="layout-padding row justify-center background-whitesmoke items-center">
-            <q-card class="my-card">
-              <q-card-section>
-                yama
-              </q-card-section>
-            </q-card>
             <q-card flat bordered class="my-card">
               <q-card-section>
-                <div class="text-h6">Our Changing Planet</div>
+                <div class="text-h6">Engineer & Creater</div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
+                東京都立大学システムデザイン学部情報科学科
               </q-card-section>
 
               <q-separator inset />
 
               <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
+                <q-avatar size="30px">
+                  <img src="https://cdn.icon-icons.com/icons2/936/PNG/128/github-logo_icon-icons.com_73546.png">
+                </q-avatar>&nbsp;&nbsp;
+                <a href="https://github.com/kurikinton105">kurikinton105</a><br><br>
+                <q-avatar size="30px">
+                  <img src="~assets/Twitter_Logo_WhiteOnBlue.png">
+                </q-avatar>&nbsp;&nbsp;
+                <a href="https://twitter.com/y_a_m_a_y_a">@y_a_m_a_y_a</a><br><br>
+                <q-avatar size="30px">
+                  <img src="~assets/qiita-qiita-jobs-favicon.png">
+                </q-avatar>&nbsp;&nbsp;
+                <a href="https://qiita.com/y_a_m_a">y_a_m_a</a><br><br>
+                <q-avatar size="30px">
+                  <img src="~assets/hatenablog-logo.png">
+                </q-avatar>&nbsp;&nbsp;
+                <a href="https://y-a-m-a-y-a.hatenablog.com/">yamaのメタノート</a><br><br>
+
               </q-card-section>
             </q-card>
           </div>
         </div>
       </div>
+      <br><br>
     </q-page>
     <hr>
     <q-page>
+      <div class="inner"><br>
+        <div class="text-h3">
+          Skills
+        </div><br><br>
+      </div>
+    </q-page>
+    <hr>
+    <q-page>
+      <br>
       <div class="q-px-lg q-pb-md">
       <q-timeline :layout="layout" color="secondary">
         <q-timeline-entry heading>
@@ -103,85 +138,153 @@
     </q-page>
     <hr>
     <q-page>
-      <div class="layout-padding row justify-center background-whitesmoke items-center">
-      <div class="col-xs-12 col-sm-7 col-lg-5">
+      <div class="inner">
         <br>
-        <q-card class="q-card-background-white">
-          <q-card-main>
-            <div class="center">
-              <div class="row justify-center">
-                <div>
-                  <q-spinner-ball color="blue" size="10em"/>
-                  <!--<img src="~assets/quasar-logo-full.svg" class="logo-sized">-->
-                </div>
-              </div>
-              <div class="row justify-center">
-                <div class="col-sm-10  text-left justify-center">
-                  <div class="center">
-                  <h5>Cos5yearとは</h5>
-                  <p>Cos5yearとは、8割程度ノリで動くものづくり集団である。ハッカソンに参加したりしている。作ることで様々な課題を解決することができる技術集団である。</p>
-                  <h5>Member</h5>
-                  </div>
-                  <div class="q-pa-md justify-center" style="max-width: 350px">
-                    <q-list bordered>
-                      <q-item>
-                        <q-item-section avatar>
-                          <q-avatar rounded>
-                            <img src="https://avatars1.githubusercontent.com/u/60651943?s=460&v=4">
-                          </q-avatar>
-                        </q-item-section>
-                        <q-item-section>jimar884</q-item-section>
-                        <q-item-label lines="1" class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">
-                          <span class="cursor-pointer"><a href="https://github.com/jimar884">Open in GitHub</a></span>
-                        </q-item-label>
-                      </q-item>
+        <div class="text-h3">
+          Articles
+        </div><br>
+        <div class="text-weight-regular">
+          Qiita、はてなブログなどから記事の一覧をまとめています。
+        </div>
+      </div><br>
+      <div class="flex flex-center">
+       <div class="row">
+       <div class="col-auto">
+        <q-card class="my-card" flat bordered>
+          <br>
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar>
+                <img src="https://gyazo.com/d9f84923f103dded87fb6769db010e70/thumb/1000">
+              </q-avatar>
+            </q-item-section>
 
-                      <q-item link="https://github.com/kurikinton105">
-                        <q-item-section avatar>
-                          <q-avatar rounded>
-                            <img src="https://avatars1.githubusercontent.com/u/51431248?s=460&u=5128210f9a2fa7630816fc16062dd778f5748570&v=4">
-                          </q-avatar>
-                        </q-item-section>
-                        <q-item-section>yama</q-item-section>
-                        <q-item-label lines="1" class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">
-                          <span class="cursor-pointer"><a href="https://github.com/kurikinton105">Open in GitHub</a></span>
-                        </q-item-label>
-                      </q-item>
-
-                      <q-item>
-                        <q-item-section avatar>
-                          <q-avatar rounded>
-                            <img src="https://avatars1.githubusercontent.com/u/17696131?s=460&v=4">
-                          </q-avatar>
-                        </q-item-section>
-                        <q-item-section>tomsoya</q-item-section>
-                        <q-item-label lines="1" class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">
-                          <span class="cursor-pointer"><a href="https://github.com/tomsoyaN">Open in GitHub</a></span>
-                        </q-item-label>
-                      </q-item>
-                      <q-separator />
-                    </q-list>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </q-card-main>
+            <q-item-section>
+              <q-item-label><a href= "https://qiita.com/y_a_m_a/items/2fef42212f5ffeb11531" >Azure Web AppsではじめるFlask入門</a></q-item-label>
+              <q-item-label caption>
+                2020年12月25日
+              </q-item-label>
+            </q-item-section>
+          </q-item>
+          <br>
         </q-card>
-        <br>
+        </div>&nbsp;&nbsp;
+        <div class="col-auto">
+          <q-card class="my-card" flat bordered>
+            <br>
+            <q-item>
+              <q-item-section avatar>
+                <q-avatar>
+                  <img src="https://gyazo.com/d9f84923f103dded87fb6769db010e70/thumb/1000">
+                </q-avatar>
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label><a href= "https://qiita.com/y_a_m_a/items/2fef42212f5ffeb11531" >Azure Web AppsではじめるFlask入門</a></q-item-label>
+                <q-item-label caption>
+                  2020年12月25-2日
+                </q-item-label>
+              </q-item-section>
+            </q-item>
+            <br>
+          </q-card>
+        </div>&nbsp;&nbsp;
+        <div class="col-auto">
+          <q-card class="my-card" flat bordered>
+            <br>
+            <q-item>
+              <q-item-section avatar>
+                <q-avatar>
+                  <img src="~assets/qiita-qiita-jobs-favicon.png">
+                </q-avatar>
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label><a href= "https://qiita.com/y_a_m_a/items/2fef42212f5ffeb11531" >Azure Web AppsではじめるFlask入門</a></q-item-label>
+                <q-item-label caption>
+                  2020年12月25-3日
+                </q-item-label>
+              </q-item-section>
+            </q-item>
+            <br>
+          </q-card>
+
+          <div class="col-auto">
+          <q-card class="my-card" flat bordered>
+            <br>
+            <q-item>
+              <q-item-section avatar>
+                <q-avatar>
+                  <img src="~assets/qiita-qiita-jobs-favicon.png">
+                </q-avatar>
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label><a href= "https://qiita.com/y_a_m_a/items/2fef42212f5ffeb11531" >Azure Web AppsではじめるFlask入門</a></q-item-label>
+                <q-item-label caption>
+                  2020年12月25-4日
+                </q-item-label>
+              </q-item-section>
+            </q-item>
+            <br>
+          </q-card>
+        </div>
+
+        </div>
       </div>
     </div>
     </q-page>
+
+    <q-page>
+      <div class="inner">
+        <br>
+        <a>Copyright yama 2020-2021.</a>
+        <h2>ID:{{ allDataID }}</h2>
+        <br>
+      </div>
+    </q-page>
+    <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+            <q-btn fab icon="keyboard_arrow_up" color="accent" />
+    </q-page-scroller>
   </q-page-container>
 
 </template>
-
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 400px
+.inner
+  text-align: center
+</style>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
+import firebase from 'firebase'
+
 export default {
   name: 'PageIndex',
   computed: {
     layout () {
       return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
     }
+  },
+  data () {
+    return {
+      allData: [],
+      allDataID: []
+    }
+  },
+  created: {
+    allCommentsID: {
+      //const db = firebase.firestore();
+      firebase.firestore().collection('Activity').get().then(snapshot => {
+        snapshot.forEach(doc => {
+          this.allDataID.push(doc.id)
+        })
+      })
+    }
+  },
+  methods: {
+
   }
 }
 

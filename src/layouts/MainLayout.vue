@@ -1,24 +1,26 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+      <div class="bg-cyan text-white">
+        <q-toolbar>
+          <q-btn
+            flat
+            dense
+            round
+            icon=""
+            aria-label="Menu"
+            @click="leftDrawerOpen = !leftDrawerOpen"
+          />
 
-        <q-toolbar-title>
-          yama-code
-        </q-toolbar-title>
+          <q-toolbar-title>
+            yama-code
+          </q-toolbar-title>
 
-        <div></div>
-      </q-toolbar>
+          <div></div>
+        </q-toolbar>
+        </div>
     </q-header>
-
+    <!--
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
@@ -39,6 +41,7 @@
         />
       </q-list>
     </q-drawer>
+    -->
 
     <q-page-container>
       <router-view />
@@ -47,6 +50,7 @@
 </template>
 
 <script>
+/**
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
@@ -92,16 +96,17 @@ const linksData = [
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
   }
-]
+]**/
 
 export default {
-  name: 'MainLayout',
+  name: 'MainLayout'//,
+  /**
   components: { EssentialLink },
   data () {
     return {
       leftDrawerOpen: false,
       essentialLinks: linksData
     }
-  }
+  }**/
 }
 </script>
