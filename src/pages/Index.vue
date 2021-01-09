@@ -134,7 +134,7 @@
                 </q-item-section>
 
                 <q-item-section>
-                <q-item-label><a v-bind:href= "Artcle.link" >{{ Artcle.name }}</a></q-item-label>
+                <q-item-label><a v-bind:href= "Artcle.link" target="_blank">{{ Artcle.name }}</a></q-item-label>
                   <q-item-label caption>
                     {{ Artcle.date }}
                   </q-item-label>
