@@ -239,8 +239,10 @@
       <div class="inner">
         <br>
         <a>Copyright yama 2020-2021.</a>
-        <h2>ID:{{ allDataID }}</h2>
+        <!--<a>AllData:{{ allDataID }}</a>-->
         <br>
+        <a>Activity:{{allDataID.data.Activity}}</a><br>
+        <a>Artcles:{{allDataID.data.Artcles}}</a>
       </div>
     </q-page>
     <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
@@ -263,13 +265,15 @@ export default {
   name: 'PageIndex',
   data () {
     return {
-      allDataID:"aa"
+      allDataID:"aa",
+      Activity:"non",
+      Artcles:"non"
+
     }
   },
   mounted: function(){
-    console.log("aaa")
-    axios.get('http://127.0.0.1:5000/')
-      .then(response => (this.allDataID = response.data))
+    axios.get('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info')
+      .then(response => (this.allDataID = response))
     console.log('check sample_url')
     //this.allDataID="bbb"
     console.log(this.allDataID)
