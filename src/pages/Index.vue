@@ -258,33 +258,29 @@
 </style>
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
-import firebase from 'firebase'
-
 export default {
   name: 'PageIndex',
-  computed: {
-    layout () {
-      return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
-    }
-  },
   data () {
     return {
-      allData: [],
-      allDataID: []
-    }
-  },
-  created: {
-    allCommentsID: {
-      //const db = firebase.firestore();
-      firebase.firestore().collection('Activity').get().then(snapshot => {
-        snapshot.forEach(doc => {
-          this.allDataID.push(doc.id)
-        })
-      })
+      allDataID:"Nan!"
     }
   },
   methods: {
-
+    fetch(){
+      this.$axios.get('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info',{})
+        .then((res) => {
+          console.log(res)
+          this.allDataID = res
+          console.log(this.allDataID)
+        })
+        .catch((err) => {
+          console.log(err)
+          console.log("ここでエラーの発生！")
+        })
+      console.log('check sample_url')
+      console.log(this.sample_url)
+      console.log('check')
+    }
   }
 }
 
