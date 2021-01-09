@@ -1,17 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header reveal elevated>
       <div class="bg-cyan text-white">
         <q-toolbar>
-          <q-btn
-            flat
-            dense
-            round
-            icon=""
-            aria-label="Menu"
-            @click="leftDrawerOpen = !leftDrawerOpen"
-          />
-
           <q-toolbar-title>
             yama-code
           </q-toolbar-title>
@@ -46,8 +37,21 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <div class="inner">
+        <br>
+        <a>Copyright yama 2020-2021.</a>
+        <br><br>
+      </div>
   </q-layout>
 </template>
+
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 400px
+.inner
+  text-align: center
+</style>
 
 <script>
 /**
