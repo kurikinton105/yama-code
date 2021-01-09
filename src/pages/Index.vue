@@ -82,18 +82,29 @@
         <q-timeline-entry heading>
           Activity Record
         </q-timeline-entry>
-        <q-timeline-entry
-          title="Smoothie Slide"
-          subtitle="October 17-18, 2020"
-          side="right"
-          icon="show_chart"
-        >
-          <div>
-            オンラインでの複数人のプレゼンで困った経験はありますか？このアプリのRoomのスライドはどの端末でも連携されているので、原稿を見ながらスライドを操作する人はもういりません。さぁ、プレゼンの神になろう。 <br>
-            #オータムハッカソン 最優秀作品
-          </div>
-        </q-timeline-entry>
+        <div v-for = "Activity in allDataID.data.Activity" :key="Activity">
+          <q-timeline-entry
+            v-bind:title="Activity.name"
+            v-bind:subtitle="Activity.date_info"
+            v-bind:side="Activity.side"
+            v-bind:icon="Activity.icon"
+          >
+            <div>
+              {{ Activity.infomation }}
+            </div>
+          </q-timeline-entry>
 
+          <q-timeline-entry
+            v-bind:title="Activity.name"
+            v-bind:subtitle="Activity.date_info"
+            v-bind:side="Activity.side"
+            v-bind:icon="Activity.icon"
+          >
+            <div>
+              {{ Activity.infomation }}
+            </div>
+          </q-timeline-entry>
+        </div>
       </q-timeline>
       </div>
     </q-page>
@@ -109,27 +120,28 @@
         </div>
       </div><br>
       <div class="flex flex-center">
-       <div class="row">
-       <div class="col-auto">
-        <q-card class="my-card" flat bordered>
-          <br>
-          <q-item>
-            <q-item-section avatar>
-              <q-avatar>
-                <img src="https://gyazo.com/d9f84923f103dded87fb6769db010e70/thumb/1000">
-              </q-avatar>
-            </q-item-section>
+        <div class="row">
+          <div v-for = "Artcle in allDataID.data.Artcles" :key="Artcle">
+          <div class="col-auto">
+            <q-card class="my-card" flat bordered>
+              <br>
+              <q-item>
+                <q-item-section avatar>
+                  <q-avatar>
+                    <img src="https://gyazo.com/d9f84923f103dded87fb6769db010e70/thumb/1000">
+                  </q-avatar>
+                </q-item-section>
 
-            <q-item-section>
-              <q-item-label><a href= "https://qiita.com/y_a_m_a/items/2fef42212f5ffeb11531" >Azure Web AppsではじめるFlask入門</a></q-item-label>
-              <q-item-label caption>
-                2020年12月25日
-              </q-item-label>
-            </q-item-section>
-          </q-item>
-          <br>
-        </q-card>
-
+                <q-item-section>
+                <q-item-label><a v-bind:href= "Artcle.link" >{{ Artcle.name }}</a></q-item-label>
+                  <q-item-label caption>
+                    {{ Artcle.date }}
+                  </q-item-label>
+              </q-item-section>
+            </q-item>
+            <br>
+          </q-card>
+        </div>
         </div>
       </div>
     </div>
