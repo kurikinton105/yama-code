@@ -258,30 +258,22 @@
 </style>
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
+import axios from 'axios';
 export default {
   name: 'PageIndex',
   data () {
     return {
-      allDataID:"Nan!"
+      allDataID:"aa"
     }
   },
-  mounted: {
-    fetch(){
-      this.$axios.post('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info',{})
-        .then((res) => {
-          console.log(res)
-          this.allDataID = res
-          console.log(this.allDataID)
-        })
-        .catch((err) => {
-          this.allDataID = "Error"
-          console.log(err)
-          console.log("ここでエラーの発生！")
-        })
-      console.log('check sample_url')
-      console.log(this.allDataID)
-      console.log('check')
-    }
+  mounted: function(){
+    console.log("aaa")
+    axios.get('http://127.0.0.1:5000/')
+      .then(response => (this.allDataID = response.data))
+    console.log('check sample_url')
+    //this.allDataID="bbb"
+    console.log(this.allDataID)
+    console.log('check')
   }
 }
 
