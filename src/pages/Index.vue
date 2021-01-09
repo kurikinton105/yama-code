@@ -265,20 +265,21 @@ export default {
       allDataID:"Nan!"
     }
   },
-  methods: {
+  mounted: {
     fetch(){
-      this.$axios.get('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info',{})
+      this.$axios.post('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info',{})
         .then((res) => {
           console.log(res)
           this.allDataID = res
           console.log(this.allDataID)
         })
         .catch((err) => {
+          this.allDataID = "Error"
           console.log(err)
           console.log("ここでエラーの発生！")
         })
       console.log('check sample_url')
-      console.log(this.sample_url)
+      console.log(this.allDataID)
       console.log('check')
     }
   }
