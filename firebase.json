@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site":"yamayama",
+    "public": "dist/spa",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
