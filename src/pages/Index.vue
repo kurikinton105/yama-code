@@ -1,10 +1,24 @@
 <template>
   <q-page-container>
     <q-page class="flex flex-center">
-    <img
+    <!--<img
       alt="Quasar logo"
       src="~assets/quasar-logo-full.svg"
-    >
+    >-->
+    <H2><vue-typer
+      :text='["Now Loading. . .","Welcome to yama-code!!!!!",""]'
+      :repeat='0'
+      :shuffle='false'
+      initial-action='typing'
+      :pre-type-delay='80'
+      :type-delay='100'
+      :pre-erase-delay='2000'
+      :erase-delay='250'
+      erase-style='clear'
+      :erase-on-complete='false'
+      caret-animation='blink'
+    ></vue-typer></H2>
+
     </q-page>
     <hr>
     <q-page class="padding">
@@ -147,6 +161,7 @@
         </div>
       </div>
     </div>
+    <vue-typer :text="['テキスト1', 'テキスト2', 'テキスト3']"></vue-typer>
     </q-page>
 
     <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
@@ -165,6 +180,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
 import axios from 'axios';
+import { VueTyper } from 'vue-typer'
 export default {
   name: 'PageIndex',
   data () {
@@ -174,6 +190,9 @@ export default {
       Artcles:"non"
 
     }
+  },
+  components: {
+    VueTyper
   },
   mounted: function(){
     axios.get('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info')
