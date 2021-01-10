@@ -45,7 +45,7 @@
       class="q-ma-md"
     />
     <H2><vue-typer
-      :text='["Now Loading. . .","Well come to yama-code!!!!! "]'
+      :text='["Now Loading. . .","Welcome to yama-code!!!!!"]'
       :repeat='0'
       :shuffle='false'
       initial-action='typing'
