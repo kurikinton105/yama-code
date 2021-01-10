@@ -6,7 +6,6 @@
           <q-toolbar-title>
             yama-code
           </q-toolbar-title>
-
           <div></div>
         </q-toolbar>
         </div>
@@ -35,6 +34,32 @@
     -->
 
     <q-page-container>
+      <q-page class="flex flex-center">
+    <!--<img
+      alt="Quasar logo"
+      src="~assets/quasar-logo-full.svg"
+    >--><q-circular-progress
+      indeterminate
+      size="50px"
+      color="light-blue"
+      class="q-ma-md"
+    />
+    <H2><vue-typer
+      :text='["Now Loading. . .","Well come to yama-code!!!!! "]'
+      :repeat='0'
+      :shuffle='false'
+      initial-action='typing'
+      :pre-type-delay='80'
+      :type-delay='100'
+      :pre-erase-delay='2000'
+      :erase-delay='50'
+      erase-style='backspace'
+      :erase-on-complete='false'
+      caret-animation='smooth'
+    ></vue-typer></H2>
+
+    </q-page>
+    <hr>
       <router-view />
     </q-page-container>
     <div class="inner">
@@ -101,9 +126,12 @@ const linksData = [
     link: 'https://awesome.quasar.dev'
   }
 ]**/
-
+import { VueTyper } from 'vue-typer'
 export default {
-  name: 'MainLayout'//,
+  name: 'MainLayout',
+  components: {
+    VueTyper
+  }//,
   /**
   components: { EssentialLink },
   data () {
