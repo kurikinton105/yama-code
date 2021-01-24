@@ -38,26 +38,46 @@
     <!--<img
       alt="Quasar logo"
       src="~assets/quasar-logo-full.svg"
-    >--><q-circular-progress
+    >--><!--<q-circular-progress
       indeterminate
       size="50px"
       color="light-blue"
       class="q-ma-md"
-    />
-    <H2><vue-typer
-      :text='["Now Loading. . .","Welcome to yama-code!!!!!"]'
-      :repeat='0'
-      :shuffle='false'
-      initial-action='typing'
-      :pre-type-delay='80'
-      :type-delay='100'
-      :pre-erase-delay='2000'
-      :erase-delay='50'
-      erase-style='backspace'
-      :erase-on-complete='false'
-      caret-animation='smooth'
-    ></vue-typer></H2>
-
+    />-->
+    <div v-if="!isPhone">
+    <div class="Title">
+      <vue-typer
+        :text='["Now Loading. . .","Welcome to yama-code!!!!"]'
+        :repeat='0'
+        :shuffle='false'
+        initial-action='typing'
+        :pre-type-delay='80'
+        :type-delay='100'
+        :pre-erase-delay='2000'
+        :erase-delay='50'
+        erase-style='backspace'
+        :erase-on-complete='false'
+        caret-animation='smooth'
+      ></vue-typer>
+      </div>
+    </div>
+    <div v-if="isPhone">
+      <h2>
+      <vue-typer
+        :text='["Now Loading. . .","Welcome to yama-code!!!!"]'
+        :repeat='0'
+        :shuffle='false'
+        initial-action='typing'
+        :pre-type-delay='80'
+        :type-delay='100'
+        :pre-erase-delay='2000'
+        :erase-delay='50'
+        erase-style='backspace'
+        :erase-on-complete='false'
+        caret-animation='smooth'
+      ></vue-typer>
+      </h2>
+    </div>
     </q-page>
     <hr>
       <router-view />
@@ -76,6 +96,10 @@
   max-width: 400px
 .inner
   text-align: center
+.TitlePhone
+  font-size:20px
+.Title
+  font-size:70px
 </style>
 
 <script>
@@ -127,11 +151,23 @@ const linksData = [
   }
 ]**/
 import { VueTyper } from 'vue-typer'
+import { ref } from '@vue/composition-api'
 export default {
   name: 'MainLayout',
   components: {
     VueTyper
-  }//,
+  },
+  setup () {
+    const isPhone = ref(false)
+    const width = ref(window.innerWidth)
+    if (width.value <= 400) {
+      isPhone.value = true
+    } else {
+      isPhone.value = false
+    }
+    console.log(isPhone)
+    return { isPhone }
+  }
   /**
   components: { EssentialLink },
   data () {

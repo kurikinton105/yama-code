@@ -81,7 +81,7 @@
       <br><br>
     </q-page>
     <hr>
-    <q-page>
+    <q-page class="bluepage">
       <div class="inner"><br>
         <div class="text-h3">
           Skills
@@ -96,26 +96,16 @@
         <q-timeline-entry heading>
           Activity Record
         </q-timeline-entry>
-        <div v-for = "Activity in allDataID.data.Activity" :key="Activity">
+        <div><!-- v-for = "Activity in allDataID.data.Activity" :key="Activity">-->
           <q-timeline-entry
+            v-for="Activity in allDataID.data.Activity" :key="Activity"
             v-bind:title="Activity.name"
             v-bind:subtitle="Activity.date_info"
             v-bind:side="Activity.side"
             v-bind:icon="Activity.icon"
           >
             <div>
-              {{ Activity.infomation }}
-            </div>
-          </q-timeline-entry>
-
-          <q-timeline-entry
-            v-bind:title="Activity.name"
-            v-bind:subtitle="Activity.date_info"
-            v-bind:side="Activity.side"
-            v-bind:icon="Activity.icon"
-          >
-            <div>
-              {{ Activity.infomation }}
+              <p v-html="Activity.infomation"></p>
             </div>
           </q-timeline-entry>
         </div>
@@ -138,12 +128,12 @@
         <div class="row justify-center">
           <div v-for = "Artcle in allDataID.data.Artcles" :key="Artcle">
           <div class="col-auto">
-            <q-card class="my-card" flat bordered>
+            <q-card class="my-card-artcle" flat bordered>
               <br>
               <q-item>
                 <q-item-section avatar>
-                  <q-avatar>
-                    <img src="https://gyazo.com/d9f84923f103dded87fb6769db010e70/thumb/1000">
+                  <q-avatar size="30px">
+                      <img :src="Artcle.site">
                   </q-avatar>
                 </q-item-section>
 
@@ -161,7 +151,7 @@
         </div>
       </div>
     </div>
-    <vue-typer :text="['テキスト1', 'テキスト2', 'テキスト3']"></vue-typer>
+
     </q-page>
 
     <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
@@ -171,11 +161,17 @@
 
 </template>
 <style lang="sass" scoped>
+
 .my-card
+.my-card-artcle
   width: 100%
+  min-width :400px
   max-width: 400px
+  height:100px
 .inner
   text-align: center
+.bluepage
+  background-color: #0000
 </style>
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 <script>
@@ -185,9 +181,14 @@ export default {
   name: 'PageIndex',
   data () {
     return {
-      allDataID:"aa",
+      allDataID:"non",
       Activity:"non",
       Artcles:"non"
+    }
+  },
+  computed: {
+    layout () {
+      return this.$q.screen.lt.sm ? 'dense' : (this.$q.screen.lt.md ? 'comfortable' : 'loose')
     }
   },
   components: {
@@ -196,10 +197,10 @@ export default {
   mounted: function(){
     axios.get('https://us-central1-cos5year.cloudfunctions.net/portfolio-get_info')
       .then(response => (this.allDataID = response))
-    console.log('check sample_url')
+    //console.log('check sample_url')
     //this.allDataID="bbb"
-    console.log(this.allDataID)
-    console.log('check')
+    //console.log(this.allDataID)
+    //console.log('check')
   }
 }
 
