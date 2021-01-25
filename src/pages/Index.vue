@@ -46,7 +46,7 @@
           <div class="layout-padding row justify-center background-whitesmoke items-center">
             <q-card flat bordered class="my-card">
               <q-card-section>
-                <div class="text-h6">Engineer & Creater</div>
+                <div class="text-h6">Engineer & Creator</div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
@@ -80,20 +80,40 @@
       </div>
       <br><br>
     </q-page>
-    <hr>
-    <q-page class="bluepage">
+
+    <q-page class="q-pa-md bg-grey-10 text-white">
       <div class="inner"><br>
         <div class="text-h3">
           Skills
         </div><br><br>
-      </div>
+        <div class ="justify-center">
+        <q-list dark style="center" class="my-card">
+          <q-item>
+            <q-item-section>Python</q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>C/C++</q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>OpenCV</q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>Vue.js</q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>Azure</q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>GCP/Firebase</q-item-section>
+          </q-item>
+        </q-list>
+      </div></div>
     </q-page>
-    <hr>
     <q-page>
       <br>
       <div class="q-px-lg q-pb-md">
       <q-timeline :layout="layout" color="secondary">
-        <q-timeline-entry heading>
+        <q-timeline-entry heading >
           Activity Record
         </q-timeline-entry>
         <div><!-- v-for = "Activity in allDataID.data.Activity" :key="Activity">-->
@@ -161,8 +181,6 @@
 
 </template>
 <style lang="sass" scoped>
-
-.my-card
 .my-card-artcle
   width: 100%
   min-width :400px

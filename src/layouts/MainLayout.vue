@@ -61,6 +61,7 @@
       ></vue-typer>
       </div>
     </div>
+    <!--
     <div v-if="isPhone">
       <h2>
       <vue-typer
@@ -77,7 +78,7 @@
         caret-animation='smooth'
       ></vue-typer>
       </h2>
-    </div>
+    </div>-->
     </q-page>
     <hr>
       <router-view />
@@ -99,7 +100,14 @@
 .TitlePhone
   font-size:20px
 .Title
-  font-size:70px
+  margin: 16px
+  font-size:10px
+@media (min-width: 300px)
+.Title
+  font-size: calc(1px + ((1vw - 6.4px)*3.571))
+@media (min-width: 1200px)
+.Title
+  font-size: 60px
 </style>
 
 <script>
