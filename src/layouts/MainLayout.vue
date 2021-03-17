@@ -3,26 +3,27 @@
     <q-header reveal elevated>
       <div class="bg-cyan text-white">
         <q-toolbar>
-          <q-toolbar-title>
-            yama-code
-          </q-toolbar-title>
-          <div></div>
+          <q-btn flat no-caps no-wrap to=/>
+            <q-toolbar-title>
+              yama-code
+            </q-toolbar-title>
+          </q-btn>
         </q-toolbar>
         </div>
     </q-header>
     <!--
     <q-drawer
-      v-model="leftDrawerOpen"
+      v-model="leftDrawerState"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="doc-left-drawer"
     >
       <q-list>
         <q-item-label
           header
           class="text-grey-8"
         >
-          Essential Links
+
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -35,15 +36,7 @@
 
     <q-page-container>
       <q-page class="flex flex-center">
-    <!--<img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-full.svg"
-    >--><!--<q-circular-progress
-      indeterminate
-      size="50px"
-      color="light-blue"
-      class="q-ma-md"
-    />-->
+
     <div v-if="!isPhone">
     <div class="Title">
       <vue-typer
@@ -116,54 +109,25 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Home',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: '/'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    title: 'Research',
+    icon: 'school',
+    link: '/research'
   }
-]**/
+]
+**/
 import { VueTyper } from 'vue-typer'
 import { ref } from '@vue/composition-api'
+
 export default {
   name: 'MainLayout',
   components: {
-    VueTyper
+    VueTyper//,
+    // EssentialLink
   },
   setup () {
     const isPhone = ref(false)
@@ -175,14 +139,14 @@ export default {
     }
     console.log(isPhone)
     return { isPhone }
-  }
-  /**
-  components: { EssentialLink },
+  },
+
   data () {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: linksData
+      leftDrawerOpen: true,
+      // essentialLinks: linksData,
+      leftDrawerState: true
     }
-  }**/
+  }
 }
 </script>

@@ -21,6 +21,8 @@
 
     </q-page>
     <hr>-->
+    <Loading />
+    <hr>
     <q-page class="padding">
       <div class="inner">
         <br>
@@ -182,6 +184,7 @@
 <script>
 import axios from 'axios';
 import { VueTyper } from 'vue-typer';
+
 export default {
   name: 'PageIndex',
   data () {
