@@ -6,7 +6,7 @@
   "author": "kurikinton105 <yamadakenta0101@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
+    "dev": "quasar dev --history-api-fallback",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
     "lint": "eslint --ext .js,.vue ./",
@@ -14,13 +14,16 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "axios": "^0.21.1",
     "@vue/composition-api": "^0.6.4",
+    "axios": "^0.21.1",
+    "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.6.5",
     "firebase": "^8.2.1",
+    "ismobilejs": "^1.1.1",
     "quasar": "^1.0.0",
     "typed.js": "^2.0.11",
     "vue-analytics": "^5.22.1",
+    "vue-mq": "^1.0.1",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
