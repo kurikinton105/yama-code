@@ -144,8 +144,8 @@
         </div>
       </div><br>
       <div class="justify-evenly">
-      <div class="flex flex-center">
-        <div class="row justify-center">
+      <div class="flex flex-center ">
+        <div class="row justify-center q-gutter-sm">
           <div v-for = "Artcle in allDataID.data.Artcles" :key="Artcle">
           <div class="col-auto">
             <q-card class="my-card-artcle" flat bordered>
