@@ -2,6 +2,13 @@
 
 yama's page
 
+yamaの活動ををまとめたサイト https://yama-code.web.app/ のリポジトリのフロント部分です
+
+## using Technology
+
+- Quasar.js (Vue.js framework)
+- Firebase hosting
+
 ## Install the dependencies
 ```bash
 yarn
