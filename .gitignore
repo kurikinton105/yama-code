@@ -35,3 +35,6 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+# firebase.conf.jsの除外
+firebase.conf.js
