@@ -15,7 +15,7 @@
         <q-select v-model="sheets" :options="options" label="シートの選択" />
       </div>
       <div v-if="sheets === 'Activity'">
-        <q-input v-model="information" label="information" />
+        <q-input v-model="name" label="name" />
         <br>
         <li>HTML Text</li>
         <q-editor
@@ -124,12 +124,12 @@
         </div>
 
         <div v-if="sheets === 'Articles'">
-          <q-input v-model="information" label="information" />
+          <q-input v-model="name" label="information" />
         <br>
         </div>
 
         <div v-if="sheets === 'Skills'">
-          <q-input v-model="information" label="Skills" />
+          <q-input v-model="name" label="Skills" />
         <br>
         </div>
         <br>
@@ -190,7 +190,8 @@ export default {
       ],
       sheetsJson: null,
       calenderdate: '',
-      submitResult: []
+      submitResult: [],
+      name:''
     }
   },
   methods: {
@@ -223,22 +224,24 @@ export default {
         console.log(todaystr)
       }
       this.sheetsJson = {
-        'sheets':this.sheets,
-        'auth': firebaseConf.userid,
-        'info':{
+        'category':this.sheets,
+        'signature': firebaseConf.userid,
+        'message':{
           'date':this.calenderdate,
-          'information':this.information,
-          'html':this.editor,
+          'name':this.name,
+          'information':this.editor,
           'icon':'chart',
           'side':'right'
         }
       }
       // APIを叩く
-      /*
-      await axios.get('https://us-central1-cos5year.cloudfunctions.net/SheetsAPI?sheet_id=1FeRqAE3YLWKfvHomN23ANyZONzT0hKBtAFp08H-c9gI')
+
+      await axios.post('https://secure-lowlands-50183.herokuapp.com/updateportfolioAPI',
+        this.sheetsJson
+      )
         .then(response => (this.sheetsJson = response))
         console.log(response)
-      */
+
     },
     onSubmit (evt) { // calender
       const formData = new FormData(evt.target)
