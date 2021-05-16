@@ -20,6 +20,7 @@
     "core-js": "^3.6.5",
     "firebase": "^8.3.3",
     "ismobilejs": "^1.1.1",
+    "logrocket": "^1.2.0",
     "quasar": "^1.0.0",
     "typed.js": "^2.0.11",
     "vue-analytics": "^5.22.1",

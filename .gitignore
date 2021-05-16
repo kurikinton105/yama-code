@@ -38,3 +38,4 @@ yarn-error.log*
 
 # firebase.conf.jsの除外
 firebase.conf.js
+config.js
