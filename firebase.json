@@ -1,13 +1,13 @@
 {
   "hosting": {
-    "site":"yama-code",
+    "site": "yama-code",
     "public": "dist/spa",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
-    ,"rewrites": [
+    ],
+    "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
