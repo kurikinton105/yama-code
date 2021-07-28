@@ -4,7 +4,7 @@ node_modules
 /.firebase
 /.vscode
 .firebaserc
-
+*.env
 
 # Quasar core related directories
 .quasar
