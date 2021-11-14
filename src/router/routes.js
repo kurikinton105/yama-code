@@ -7,13 +7,6 @@ const routes = [
     ]
   },
   {
-    path: '/research',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Research.vue') }
-    ]
-  },
-  {
     path: '/edit',
     component: () => import('layouts/MainLayout.vue'),
     children: [
