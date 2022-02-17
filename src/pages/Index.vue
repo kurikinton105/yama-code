@@ -1,26 +1,5 @@
 <template>
   <q-page-container>
-    <!--<q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-full.svg"
-    >
-    <H2><vue-typer
-      :text='["Now Loading. . .","Well come to yama-code!!!!! "]'
-      :repeat='0'
-      :shuffle='false'
-      initial-action='typing'
-      :pre-type-delay='80'
-      :type-delay='100'
-      :pre-erase-delay='2000'
-      :erase-delay='50'
-      erase-style='backspace'
-      :erase-on-complete='false'
-      caret-animation='smooth'
-    ></vue-typer></H2>
-
-    </q-page>
-    <hr>-->
     <q-page class="padding">
       <div class="inner">
         <br />
@@ -33,9 +12,6 @@
             src="https://pbs.twimg.com/profile_images/986113842739478528/2PlaIAsz_400x400.jpg"
             style="height: 280px; max-width: 300px"
           ></q-img>
-          <!--<q-avatar>
-            <img src="https://pbs.twimg.com/profile_images/986113842739478528/2PlaIAsz_400x400.jpg">
-          </q-avatar>-->
         </div>
         <br />
         <div class="text-h4">
@@ -92,24 +68,6 @@
       <br /><br />
     </q-page>
     <hr>
-    <!--<q-page class="q-pa-md bg-grey-10 text-white">
-      <div class="inner">
-        <br />
-        <div class="text-h3">
-          Skills
-        </div>
-        <br /><br />
-        <div class="justify-center">
-          <q-list dark style="center" class="my-card">
-            <div v-for="Skill in allDataID.data.Skills" :key="Skill">
-              <q-item>
-                <q-item-section>{{ Skill.skills }}</q-item-section>
-              </q-item>
-            </div>
-          </q-list>
-        </div>
-      </div>
-    </q-page>-->
     <q-page>
       <br />
       <div class="q-px-lg q-pb-md">
@@ -119,7 +77,7 @@
           </q-timeline-entry>
           <div>
             <q-timeline-entry
-              v-for="Activity in allDataID.data.Activity"
+              v-for="Activity in Activities.data"
               :key="Activity"
               v-bind:title="Activity.name"
               v-bind:subtitle="Activity.date_info"
@@ -150,7 +108,7 @@
       <div class="justify-evenly">
         <div class="flex flex-center ">
           <div class="row justify-center q-gutter-sm">
-            <div v-for="Article in allDataID.data.Articles" :key="Article">
+            <div v-for="Article in Articles.data" :key="Article">
               <div class="col-auto">
                 <q-card class="my-card-artcle" flat bordered>
                   <br />
@@ -216,8 +174,8 @@ export default {
     return {
       parser,
       allDataID: "non",
-      Activity: "non",
-      Artcles: "non",
+      Activities: "non",
+      Articles: "non",
       Skills: "non"
     };
   },
@@ -234,15 +192,28 @@ export default {
     VueTyper
   },
   mounted: function() {
+
     axios
       .get(
         "https://us-central1-cos5year.cloudfunctions.net/SheetsAPI?sheet_id=1FeRqAE3YLWKfvHomN23ANyZONzT0hKBtAFp08H-c9gI"
       )
       .then(response => (this.allDataID = response));
+
     //console.log('check sample_url')
     //this.allDataID="bbb"
     //console.log(this.allDataID)
     //console.log('check')
+    axios
+      .get(
+        "https://api.sssapi.app/Dg3gg3OE7uDaEbBzq2DPb"
+      ).then(response => (this.Activities = response));
+
+    axios
+      .get(
+        "https://api.sssapi.app/V-sFi3aRWS1Ykb1j3m2qO"
+      ).then(response => (this.Articles = response));
+      console.log(this.allDataID);
+      console.log(this.data.Activity);
   }
 };
 </script>
