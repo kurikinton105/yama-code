@@ -32,11 +32,9 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                東京都立大学システムデザイン学部情報科学科
+                <p v-html="parser.translateHTMLString('東京都立大学大学院 システムデザイン研究科 情報科学域 博士前期過程')"></p>
               </q-card-section>
-
               <q-separator inset />
-
               <q-card-section>
                 <q-avatar size="30px">
                   <img
@@ -60,6 +58,12 @@
                 <a href="https://y-a-m-a-y-a.hatenablog.com/"
                   >yamaのメタノート</a
                 ><br /><br />
+                <q-avatar square size="30px">
+                  <img src="https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/In-Blue-Logo.png.original.png" /> </q-avatar
+                >&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/yamada-kenta5/"
+                  >yamada-kenta5</a
+                ><br /><br />
               </q-card-section>
             </q-card>
           </div>
@@ -67,7 +71,7 @@
       </div>
       <br /><br />
     </q-page>
-    <hr>
+    <hr />
     <q-page>
       <br />
       <div class="q-px-lg q-pb-md">
@@ -164,13 +168,13 @@
 <script>
 import axios from "axios";
 import { VueTyper } from "vue-typer";
-import { loadDefaultJapaneseParser } from 'budoux'
-import { defineComponent } from 'vue'
+import { loadDefaultJapaneseParser } from "budoux";
+import { defineComponent } from "vue";
 
 export default {
   name: "PageIndex",
   data() {
-    const parser = loadDefaultJapaneseParser() // budoux
+    const parser = loadDefaultJapaneseParser(); // budoux
     return {
       parser,
       allDataID: "non",
@@ -192,7 +196,6 @@ export default {
     VueTyper
   },
   mounted: function() {
-
     axios
       .get(
         "https://us-central1-cos5year.cloudfunctions.net/SheetsAPI?sheet_id=1FeRqAE3YLWKfvHomN23ANyZONzT0hKBtAFp08H-c9gI"
@@ -204,16 +207,14 @@ export default {
     //console.log(this.allDataID)
     //console.log('check')
     axios
-      .get(
-        "https://api.sssapi.app/Dg3gg3OE7uDaEbBzq2DPb"
-      ).then(response => (this.Activities = response));
+      .get("https://api.sssapi.app/Dg3gg3OE7uDaEbBzq2DPb")
+      .then(response => (this.Activities = response));
 
     axios
-      .get(
-        "https://api.sssapi.app/V-sFi3aRWS1Ykb1j3m2qO"
-      ).then(response => (this.Articles = response));
-      console.log(this.allDataID);
-      console.log(this.data.Activity);
+      .get("https://api.sssapi.app/V-sFi3aRWS1Ykb1j3m2qO")
+      .then(response => (this.Articles = response));
+    console.log(this.allDataID);
+    console.log(this.data.Activity);
   }
 };
 </script>
