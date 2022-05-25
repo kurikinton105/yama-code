@@ -1,39 +1,39 @@
 <template>
-    <q-page class="padding inner" style = "padding:1%">
-        <div class="text-h3" style="padding:1%">
-          Articles
-        </div>
-        <div class="text-weight-regular" style="padding:1%">
-          Qiita、はてなブログなどから記事の一覧をまとめています。
-        </div>
+  <q-page class="padding inner" style="padding:1%">
+    <div class="text-h3" style="padding:1%">
+      Articles
+    </div>
+    <div class="text-weight-regular" style="padding:1%">
+      Qiita、はてなブログなどから記事の一覧をまとめています。
+    </div>
 
-        <div class="row justify-center q-gutter-sm ">
-        <div v-for="Article in Articles.data" :key="Article">
-            <q-card class="my-card-artcle" flat bordered>
-                <br />
-                <q-item>
-                <q-item-section avatar>
-                    <q-avatar size="30px">
-                    <img :src="Article.site" />
-                    </q-avatar>
-                </q-item-section>
+    <div class="row justify-center q-gutter-sm ">
+      <div v-for="Article in Articles.data" :key="Article">
+        <q-card class="my-card-artcle" flat bordered>
+          <br />
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar size="30px">
+                <img :src="Article.site" alt="" />
+              </q-avatar>
+            </q-item-section>
 
-                <q-item-section>
-                    <q-item-label
-                    ><a v-bind:href="Article.link" target="_blank">{{
-                        Article.name
-                    }}</a></q-item-label
-                    >
-                    <q-item-label caption>
-                    {{ Article.date }}
-                    </q-item-label>
-                </q-item-section>
-                </q-item>
-                <br />
-            </q-card>
-        </div>
-        </div>
-    </q-page>
+            <q-item-section>
+              <q-item-label
+                ><a v-bind:href="Article.link" target="_blank">{{
+                  Article.name
+                }}</a></q-item-label
+              >
+              <q-item-label caption>
+                {{ Article.date }}
+              </q-item-label>
+            </q-item-section>
+          </q-item>
+          <br />
+        </q-card>
+      </div>
+    </div>
+  </q-page>
 </template>
 
 <script>

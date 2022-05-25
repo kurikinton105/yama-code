@@ -15,7 +15,7 @@
     </q-page-container>
     <!-- copyright -->
     <div class="copyright">
-      <a>Copyright yama 2020 - {{ year }}.</a>
+      <p>Copyright yama 2020 - {{ year }}.</p>
     </div>
   </q-layout>
 </template>

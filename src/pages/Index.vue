@@ -8,7 +8,7 @@
       :scroll-offset="150"
       :offset="[18, 18]"
     >
-      <q-btn fab icon="keyboard_arrow_up" color="accent" />
+      <q-btn fab icon="keyboard_arrow_up" color="accent" aria-label="arrow_up"/>
     </q-page-scroller>
   </q-page-container>
 </template>
