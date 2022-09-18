@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /edit/
-Sitemap: https://yama-code.web.app/sitemap.xml
+Disallow: *
+Allow: /
+Sitemap: https://yama-code.dev/sitemap.xml

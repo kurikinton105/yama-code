@@ -11,6 +11,7 @@
           :type-delay="100"
           :pre-erase-delay="2000"
           :erase-delay="50"
+
           erase-style="backspace"
           :erase-on-complete="false"
           caret-animation="smooth"

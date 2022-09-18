@@ -13,7 +13,14 @@ const routes = [
       { path: '', component: () => import('pages/edit.vue') }
     ]
   },
+  {
+    path: '/:id',
+    component: () => import('layouts/LinkLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/link.vue') }
+    ]
 
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
