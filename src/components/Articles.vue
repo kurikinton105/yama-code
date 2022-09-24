@@ -1,5 +1,5 @@
 <template>
-  <q-page class="padding inner" style="padding:1%">
+  <q-page class="padding inner" style="padding:5%">
     <div class="text-h3" style="padding:1%">
       Articles
     </div>
