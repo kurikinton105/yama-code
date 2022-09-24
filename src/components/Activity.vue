@@ -1,5 +1,5 @@
 <template>
-  <q-page class="padding q-px-lg q-pb-md" style = "padding:1%">
+  <q-page class="padding q-px-lg q-pb-md" style = "padding:5%">
     <q-timeline :layout="layout" color="secondary">
         <q-timeline-entry heading>
         Activity Record
