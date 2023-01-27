@@ -38,7 +38,7 @@
             <q-card-section>
               <q-avatar size="30px">
                 <img
-                  src="https://cdn.icon-icons.com/icons2/936/PNG/128/github-logo_icon-icons.com_73546.png"
+                  src="~assets/github-logo_icon-icons.com_73546.png"
                   alt="github icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
@@ -46,18 +46,27 @@
                 >kurikinton105</a
               ><br /><br />
               <q-avatar size="30px">
-                <img src="~assets/Twitter_Logo_WhiteOnBlue.png" alt="twitter icon"/> </q-avatar
+                <img
+                  src="~assets/Twitter_Logo_WhiteOnBlue.png"
+                  alt="twitter icon"
+                /> </q-avatar
               >&nbsp;&nbsp;
               <a href="https://twitter.com/y_a_m_a_y_a" target="_blank"
                 >@y_a_m_a_y_a</a
               ><br /><br />
               <q-avatar size="30px">
-                <img src="~assets/qiita-qiita-jobs-favicon.png" alt="qiita icon"/> </q-avatar
+                <img
+                  src="~assets/qiita-qiita-jobs-favicon.png"
+                  alt="qiita icon"
+                /> </q-avatar
               >&nbsp;&nbsp;
               <a href="https://qiita.com/y_a_m_a" target="_blank">y_a_m_a</a
               ><br /><br />
               <q-avatar size="30px">
-                <img src="~assets/hatenablog-logo.png" alt="hatena icon"/> </q-avatar
+                <img
+                  src="~assets/hatenablog-logo.png"
+                  alt="hatena icon"
+                /> </q-avatar
               >&nbsp;&nbsp;
               <a href="https://y-a-m-a-y-a.hatenablog.com/" target="_blank"
                 >yamaのメタノート</a
