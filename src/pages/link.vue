@@ -77,8 +77,6 @@ export default {
       .doc(this.$route.params.id)
       .get()
       .then(doc => {
-        console.log(doc);
-        console.log("a", doc.data());
         if (doc.data() == undefined) {
           this.isError = true;
           return;
@@ -89,7 +87,6 @@ export default {
         console.log(error);
       });
     if (this.isError == false) {
-      console.log("=== ページを遷移 ===\n", this.linkURL.url);
       await this.linkToOtherWindow(this.linkURL.url);
     }
   },
