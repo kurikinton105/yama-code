@@ -10,6 +10,7 @@
       </div>
     </q-header>
     <q-page-container>
+      <LoadingPage /><hr />
       <router-view />
     </q-page-container>
     <!-- copyright -->
@@ -29,8 +30,13 @@
 </style>
 
 <script>
+import LoadingPage from 'src/components/pages/LoadingPage.vue'
+
 export default {
   name: 'MainLayout',
+  components: {
+    LoadingPage
+  },
   created () {
     const d = new Date()
     this.year = d.getFullYear()
