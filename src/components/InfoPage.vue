@@ -101,29 +101,27 @@
 </template>
 
 <script>
-import { loadDefaultJapaneseParser } from 'budoux'
-import { defineComponent } from '@vue/composition-api'
+import { loadDefaultJapaneseParser } from 'budoux';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'PageIndex',
-  data () {
-    const parser = loadDefaultJapaneseParser() // budoux
+  data() {
+    const parser = loadDefaultJapaneseParser(); // budoux
     return {
       parser
-    }
+    };
   },
   computed: {
-    layout () {
+    layout() {
       return this.$q.screen.lt.sm
         ? 'dense'
         : this.$q.screen.lt.md
-          ? 'comfortable'
-          : 'loose'
+        ? 'comfortable'
+        : 'loose';
     }
-  },
-  components: {},
-  mounted: function () {}
-})
+  }
+});
 </script>
 
 <style lang="sass">

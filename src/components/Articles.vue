@@ -39,7 +39,7 @@
 <script>
 import axios from 'axios'
 import { loadDefaultJapaneseParser } from 'budoux'
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'PageIndex',
