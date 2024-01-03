@@ -33,7 +33,7 @@
             label="リロード"
             onclick="location.reload();"
           />
-          <a :href="this.linkURL" style="text-decoration:none;"
+          <a :href="linkURL" style="text-decoration:none;"
             ><q-btn color="primary" label="リンク先へ" :href="linkURL"
           /></a>
         </div>

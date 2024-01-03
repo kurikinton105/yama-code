@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
     path: '/edit',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/edit.vue') }
+      { path: '', component: () => import('pages/editPage.vue') }
     ]
   },
   {
