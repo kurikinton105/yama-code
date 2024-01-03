@@ -21,7 +21,13 @@ const routes: RouteRecordRaw[] = [
     children: [
       { path: '', component: () => import('pages/LinkPage.vue') }
     ]
-
+  },
+  {
+    path: '/l/:id',
+    component: () => import('layouts/LinkLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/LinkPage.vue') }
+    ]
   },
   // Always leave this as last one,
   // but you can also remove it
