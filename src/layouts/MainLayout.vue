@@ -30,7 +30,7 @@
 </style>
 
 <script>
-import LoadingPage from 'src/components/LoadingPage.vue'
+import LoadingPage from 'src/components/pages/LoadingPage.vue'
 
 export default {
   name: 'MainLayout',
