@@ -1,14 +1,11 @@
 .DS_Store
 .thumbs.db
 node_modules
-/.firebase
-/.vscode
-.firebaserc
-*.env
 
 # Quasar core related directories
 .quasar
 /dist
+/quasar.config.*.temporary.compiled*
 
 # Cordova related directories and files
 /src-cordova/node_modules
@@ -36,6 +33,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-# firebase.conf.jsの除外
-firebase.conf.js
-config.js
+# local .env files
+.env.local*
+Backend/.env

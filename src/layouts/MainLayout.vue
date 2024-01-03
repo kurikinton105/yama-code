@@ -10,7 +10,7 @@
       </div>
     </q-header>
     <q-page-container>
-      <Loading /><hr />
+      <LoadingPage /><hr />
       <router-view />
     </q-page-container>
     <!-- copyright -->
@@ -30,12 +30,12 @@
 </style>
 
 <script>
-import Loading from 'src/components/Loading'
+import LoadingPage from 'src/components/LoadingPage.vue'
 
 export default {
   name: 'MainLayout',
   components: {
-    Loading
+    LoadingPage
   },
   created () {
     const d = new Date()

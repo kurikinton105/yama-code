@@ -1,9 +1,11 @@
-const routes = [
+import { RouteRecordRaw } from 'vue-router';
+
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', component: () => import('pages/IndexPage.vue') }
     ]
   },
   {
@@ -17,16 +19,16 @@ const routes = [
     path: '/:id',
     component: () => import('layouts/LinkLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/link.vue') }
+      { path: '', component: () => import('pages/LinkPage.vue') }
     ]
 
   },
   // Always leave this as last one,
   // but you can also remove it
   {
-    path: '*',
-    component: () => import('pages/Error404.vue')
-  }
-]
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
+];
 
-export default routes
+export default routes;
