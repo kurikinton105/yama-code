@@ -16,6 +16,10 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: '/404',
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
+  {
     path: '/:id',
     component: () => import('layouts/LinkLayout.vue'),
     children: [

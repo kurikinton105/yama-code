@@ -126,7 +126,8 @@ app.get('*', async (req, res) => {
         html = `<!doctype html>
         <body>
           <div style="text-align: center;">
-          <a href="https://yama-code.dev">エラーが発生したため、https://yama-code.devへリダイレクトしました。</a>
+          <script type="text/javascript">window.location = "https://yama-code.dev/404";</script>
+          <a href="https://yama-code.dev">エラーが発生したため、https://yama-code.devへリダイレクトしました。</a><br />
           Error Log<br/>
           ${error}
           </div>
