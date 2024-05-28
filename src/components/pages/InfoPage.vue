@@ -21,18 +21,9 @@
         <div
           class="layout-padding row justify-center background-whitesmoke items-center"
         >
-          <q-card flat bordered class="my-card">
+          <q-card flat bordered style="min-width: 45vh;" >
             <q-card-section>
               <div class="text-h6">Engineer & Creator</div>
-            </q-card-section>
-            <q-card-section class="q-pt-none">
-              <p
-                v-html="
-                  parser.translateHTMLString(
-                    '東京都立大学大学院 システムデザイン研究科 情報科学域 博士前期課程'
-                  )
-                "
-              ></p>
             </q-card-section>
             <q-separator inset />
             <q-card-section>
@@ -47,7 +38,7 @@
               ><br /><br />
               <q-avatar size="30px">
                 <img
-                  src="~assets/Twitter_Logo_WhiteOnBlue.png"
+                  src="~assets/X_Logo.png"
                   alt="twitter icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
