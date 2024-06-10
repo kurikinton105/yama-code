@@ -5,6 +5,11 @@
         <div>{{ animatedText }}</div>
       </div>
     </div>
+    <div v-else>
+      <div class="TitlePhone">
+        <div>{{ animatedText }}</div>
+      </div>
+    </div>
   </q-page>
 </template>
 
