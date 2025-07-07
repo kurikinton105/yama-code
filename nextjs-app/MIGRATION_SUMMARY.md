@@ -19,6 +19,8 @@
 | Authentication | Firebase Auth | Firebase Auth |
 | Database | Firebase Firestore | Firebase Firestore |
 | Linting | ESLint | ESLint |
+| External APIs | axios | axios |
+| Japanese Text | budoux | budoux |
 
 ## 機能マッピング
 
@@ -132,18 +134,28 @@ src/
 - TailwindCSSによる一貫したスタイリング
 - レスポンシブデザインの強化
 - アクセシビリティの向上
+- タイムライン形式でのアクティビティ表示
+- 記事カード形式での見やすい記事一覧
 
 ### 🔧 開発体験向上
 - TypeScript完全対応
 - ESLint設定の最適化
 - ホットリロードの高速化
 - Next.js標準のファイル構造
+- 外部API呼び出しの型安全な実装
 
 ### 🛡️ セキュリティ強化
 - Next.js標準のセキュリティ機能
 - Firebase設定の改善
 - 環境変数の適切な管理
 - 型安全性の向上
+- クライアントサイドでの安全なBudouX読み込み
+
+### 📡 外部API連携
+- 元のQuasarプロジェクトと同様のAPI連携を完全再現
+- アクティビティデータの動的取得と表示
+- 記事データの動的取得と表示
+- フォールバック機能付きエラーハンドリング
 
 ## テスト結果
 
@@ -205,6 +217,13 @@ Route (app)                Size  First Load JS
   - [ ] 404ページの表示
   - [ ] Firebase接続エラーの処理
   - [ ] 認証エラーの処理
+
+- [ ] **外部API機能**
+  - [ ] アクティビティデータの取得と表示
+  - [ ] 記事データの取得と表示
+  - [ ] APIエラー時のフォールバック表示
+  - [ ] ローディング状態の表示
+  - [ ] BudouXによる日本語改行処理
 
 ## 既知の制限事項
 
