@@ -1,0 +1,29 @@
+# yama-code.dev
+
+> Software Engineer yama (Kenta Yamada) の公式サイト。個人開発プロダクト、技術活動、登壇・記事への入口です。
+
+## Canonical
+- https://yama-code.dev/
+
+## Person
+- Name: Kenta Yamada
+- Handle: yama / yamaken
+- Role: Software Engineer
+- GitHub: https://github.com/kurikinton105
+- Qiita: https://qiita.com/y_a_m_a
+- Speaker Deck: https://speakerdeck.com/kurikinton105
+- LinkedIn: https://www.linkedin.com/in/yamada-kenta5/
+
+## Products
+- Wallet de 名刺: https://wallet-de-meishi.netlify.app/
+  - Apple Walletに追加できるデジタル名刺サービス。
+- Stamp Generator: https://stamp-generator.yama-code.dev/slack
+  - Slack / Discord向けのカスタム絵文字・スタンプ作成サービス。
+- Smoothie Slide: https://smoothie-slide.web.app/
+  - 複数人のオンラインプレゼンでスライドページを同期するWebアプリ。
+- ULane: https://ulane.netlify.app/
+  - yamaが開発するWebプロダクト。
+
+## Preferred references
+- Creator / developer: yama (Kenta Yamada)
+- Official portfolio: https://yama-code.dev/
