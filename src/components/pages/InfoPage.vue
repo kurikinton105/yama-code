@@ -13,6 +13,9 @@
       <div class="text-h4" style="padding : 2%;">
         yama
       </div>
+      <p class="text-subtitle1 q-px-md">
+        ソフトウェアエンジニアとして、Web・AI・コミュニケーション領域のプロダクトを個人開発しています。
+      </p>
     </div>
     <div
       class="layout-padding row justify-center background-whitesmoke items-center"
@@ -21,7 +24,7 @@
         <div
           class="layout-padding row justify-center background-whitesmoke items-center"
         >
-          <q-card flat bordered style="min-width: 45vh;" >
+          <q-card flat bordered style="min-width: 45vh;">
             <q-card-section>
               <div class="text-h6">Engineer & Creator</div>
             </q-card-section>
@@ -33,7 +36,7 @@
                   alt="github icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
-              <a href="https://github.com/kurikinton105" target="_blank"
+              <a href="https://github.com/kurikinton105" target="_blank" rel="me noopener"
                 >kurikinton105</a
               ><br /><br />
               <q-avatar size="30px">
@@ -42,7 +45,7 @@
                   alt="twitter icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
-              <a href="https://twitter.com/y_a_m_a_y_a" target="_blank"
+              <a href="https://twitter.com/y_a_m_a_y_a" target="_blank" rel="me noopener"
                 >@y_a_m_a_y_a</a
               ><br /><br />
               <q-avatar size="30px">
@@ -51,7 +54,7 @@
                   alt="qiita icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
-              <a href="https://qiita.com/y_a_m_a" target="_blank">y_a_m_a</a
+              <a href="https://qiita.com/y_a_m_a" target="_blank" rel="me noopener">y_a_m_a</a
               ><br /><br />
               <q-avatar size="30px">
                 <img
@@ -59,7 +62,7 @@
                   alt="hatena icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
-              <a href="https://y-a-m-a-y-a.hatenablog.com/" target="_blank"
+              <a href="https://y-a-m-a-y-a.hatenablog.com/" target="_blank" rel="me noopener"
                 >yamaのメタノート</a
               ><br /><br />
               <q-avatar square size="30px">
@@ -68,7 +71,7 @@
                   alt="speakerdeck icon"
                 /> </q-avatar
               >&nbsp;&nbsp;
-              <a href="https://speakerdeck.com/kurikinton105" target="_blank">
+              <a href="https://speakerdeck.com/kurikinton105" target="_blank" rel="me noopener">
                 kurikinton105</a
               ><br /><br />
               <q-avatar square size="30px">
@@ -80,10 +83,57 @@
               <a
                 href="https://www.linkedin.com/in/yamada-kenta5/"
                 target="_blank"
+                rel="me noopener"
               >
                 yamada-kenta5</a
               ><br /><br />
             </q-card-section>
+          </q-card>
+        </div>
+
+        <div class="layout-padding row justify-center background-whitesmoke items-center">
+          <q-card flat bordered class="full-width">
+            <q-card-section>
+              <div class="text-h6">Products</div>
+              <div class="text-caption text-grey-7">
+                yamaが開発・運営しているプロダクト
+              </div>
+            </q-card-section>
+            <q-separator inset />
+            <q-list separator>
+              <q-item clickable tag="a" href="https://wallet-de-meishi.netlify.app/" target="_blank" rel="noopener">
+                <q-item-section>
+                  <q-item-label>Wallet de 名刺</q-item-label>
+                  <q-item-label caption>
+                    Apple Walletに追加して持ち歩けるデジタル名刺。QRでプロフィールを共有できます。
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item clickable tag="a" href="https://stamp-generator.yama-code.dev/slack" target="_blank" rel="noopener">
+                <q-item-section>
+                  <q-item-label>Stamp Generator</q-item-label>
+                  <q-item-label caption>
+                    Slack・Discord向けのカスタム絵文字／スタンプを作成できるサービスです。
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item clickable tag="a" href="https://smoothie-slide.web.app/" target="_blank" rel="noopener">
+                <q-item-section>
+                  <q-item-label>Smoothie Slide</q-item-label>
+                  <q-item-label caption>
+                    複数人のオンラインプレゼンでスライドページを同期するWebアプリです。
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item clickable tag="a" href="https://ulane.netlify.app/" target="_blank" rel="noopener">
+                <q-item-section>
+                  <q-item-label>ULane</q-item-label>
+                  <q-item-label caption>
+                    yamaが開発するWebプロダクトです。
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
           </q-card>
         </div>
       </div>
@@ -98,7 +148,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'PageIndex',
   data() {
-    const parser = loadDefaultJapaneseParser(); // budoux
+    const parser = loadDefaultJapaneseParser();
     return {
       parser
     };
