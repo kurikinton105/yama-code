@@ -1,28 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title><%= productName %></title>
+    <title>yama | Software Engineer & Creator</title>
 
     <meta charset="utf-8">
-    <meta name="description" content="<%= productDescription %>">
+    <meta
+      name="description"
+      content="ソフトウェアエンジニア yama（Kenta Yamada）の公式サイト。Wallet de 名刺、Stamp Generator、Smoothie Slide、ULaneなどの個人開発プロダクトと技術活動を紹介します。"
+    >
+    <meta
+      name="keywords"
+      content="yama,Kenta Yamada,山田健太,ソフトウェアエンジニア,個人開発,Wallet de 名刺,Stamp Generator,Smoothie Slide,ULane"
+    >
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+    <link rel="canonical" href="https://yama-code.dev/">
+
     <!-- OGP -->
-    <meta property="og:title" content="<%= productName %>" />
+    <meta property="og:title" content="yama | Software Engineer & Creator">
     <meta
       property="og:description"
-      content="<%= productDescription %>">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yama-code.web.app" />
+      content="ソフトウェアエンジニア yama（Kenta Yamada）の公式サイト。個人開発プロダクトと技術活動を紹介します。"
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yama-code.dev/">
+    <meta property="og:site_name" content="yama-code.dev">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://yama-code.dev/yama-icon.jpg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="yama | Software Engineer & Creator">
     <meta
-      property="og:image"
-      content="https://yama-code.web.app/yama-icon.jpg"
-    />
-    <link rel="icon" type="image/jpg" sizes="128x128" src="yama-icon.jpg">
-    <link rel="icon" type="image/jpg" sizes="96x96" src="yama-icon.jpg">
-    <link rel="icon" type="image/jpg" sizes="32x32" src="yama-icon.jpg">
-    <link rel="icon" type="image/jpg" sizes="16x16" src="yama-icon.jpg">
+      name="twitter:description"
+      content="ソフトウェアエンジニア yama（Kenta Yamada）の公式サイト。個人開発プロダクトと技術活動を紹介します。"
+    >
+    <meta name="twitter:image" content="https://yama-code.dev/yama-icon.jpg">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://yama-code.dev/#person",
+            "name": "Kenta Yamada",
+            "alternateName": ["yama", "yamaken"],
+            "url": "https://yama-code.dev/",
+            "image": "https://yama-code.dev/yama-icon.jpg",
+            "jobTitle": "Software Engineer",
+            "sameAs": [
+              "https://github.com/kurikinton105",
+              "https://twitter.com/y_a_m_a_y_a",
+              "https://qiita.com/y_a_m_a",
+              "https://speakerdeck.com/kurikinton105",
+              "https://www.linkedin.com/in/yamada-kenta5/",
+              "https://y-a-m-a-y-a.hatenablog.com/"
+            ],
+            "knowsAbout": [
+              "Software Engineering",
+              "Web Development",
+              "Product Development",
+              "AI",
+              "Digital Business Cards"
+            ],
+            "owns": [
+              {"@id": "https://wallet-de-meishi.netlify.app/#software"},
+              {"@id": "https://stamp-generator.yama-code.dev/#software"},
+              {"@id": "https://smoothie-slide.web.app/#software"},
+              {"@id": "https://ulane.netlify.app/#software"}
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://yama-code.dev/#website",
+            "name": "yama-code.dev",
+            "url": "https://yama-code.dev/",
+            "inLanguage": "ja",
+            "publisher": {"@id": "https://yama-code.dev/#person"}
+          },
+          {
+            "@type": "ItemList",
+            "name": "yamaのプロダクト",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://wallet-de-meishi.netlify.app/",
+                "name": "Wallet de 名刺"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://stamp-generator.yama-code.dev/slack",
+                "name": "Stamp Generator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "https://smoothie-slide.web.app/",
+                "name": "Smoothie Slide"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "url": "https://ulane.netlify.app/",
+                "name": "ULane"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <link rel="icon" type="image/jpg" sizes="128x128" href="yama-icon.jpg">
+    <link rel="icon" type="image/jpg" sizes="96x96" href="yama-icon.jpg">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="yama-icon.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="yama-icon.jpg">
     <link rel="icon" type="image/ico" href="yama-icon.jpg">
   </head>
   <body>
