@@ -1,5 +1,5 @@
 <template>
-  <q-page class="padding inner" style="padding:5%">
+  <section class="padding inner" style="padding:5%">
     <div class="text-h3" style="padding:1%">
       Articles
     </div>
@@ -33,7 +33,7 @@
         </q-card>
       </div>
     </div>
-  </q-page>
+  </section>
 </template>
 
 <script>

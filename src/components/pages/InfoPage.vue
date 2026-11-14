@@ -1,9 +1,9 @@
 <template>
-  <q-page class="padding" style="padding:1%">
+  <section class="padding" style="padding:1%">
     <div style="text-align: center">
-      <div class="text-h3" style="padding : 2%;">
+      <h1 class="text-h3 q-ma-none" style="padding : 2%;">
         Who is yama?
-      </div>
+      </h1>
       <q-img
         class="icon-image"
         src="https://pbs.twimg.com/profile_images/986113842739478528/2PlaIAsz_400x400.jpg"
@@ -138,7 +138,7 @@
         </div>
       </div>
     </div>
-  </q-page>
+  </section>
 </template>
 
 <script>

@@ -1,9 +1,10 @@
-# yama-code.dev
+# yama-code.web.app (legacy portfolio)
 
 > Software Engineer yama (Kenta Yamada) の公式サイト。個人開発プロダクト、技術活動、登壇・記事への入口です。
 
-## Canonical
-- https://yama-code.dev/
+## This site
+- https://yama-code.web.app/
+- Legacy Quasar portfolio. The current independent Next.js site is https://yama-code.dev/.
 
 ## Person
 - Name: Kenta Yamada

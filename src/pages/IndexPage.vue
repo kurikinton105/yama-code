@@ -1,5 +1,6 @@
 <template>
   <q-page-container>
+    <main id="main-content">
     <InfoPage />
     <hr />
     <ActivityPage /><hr />
@@ -16,6 +17,7 @@
         aria-label="arrow_up"
       />
     </q-page-scroller>
+    </main>
   </q-page-container>
 </template>
 

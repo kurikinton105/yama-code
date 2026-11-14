@@ -1,13 +1,5 @@
 User-agent: *
-Allow: /
 Disallow: /edit/
-
-User-agent: OAI-SearchBot
+Disallow: *
 Allow: /
-Disallow: /edit/
-
-User-agent: PerplexityBot
-Allow: /
-Disallow: /edit/
-
-Sitemap: https://yama-code.dev/sitemap.xml
+Sitemap: https://yama-code.web.app/sitemap.xml

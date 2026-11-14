@@ -1,5 +1,5 @@
 <template>
-  <q-page class="padding q-px-lg q-pb-md" style="padding:5%">
+  <section class="padding q-px-lg q-pb-md" style="padding:5%">
     <q-timeline :layout="layout" color="secondary">
       <q-timeline-entry heading>
         Activity Record
@@ -15,7 +15,7 @@
         <p v-html="parser.translateHTMLString(Activity.infomation)"></p>
       </q-timeline-entry>
     </q-timeline>
-  </q-page>
+  </section>
 </template>
 
 <script>
